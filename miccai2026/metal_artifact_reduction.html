@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semi-supervised Teeth Segmentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <meta name="author" content="STS Challenge">
+    <meta name="description" content="Website for STS Challenge at MICCAI Conferences.">
+    <meta name="keywords" content="MICCAI, MICCAI 2026, STS, Semi-supervised Learning, Metal Artifact Reduction, CBCT, Challenge">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="../jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../bootstrap/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/miccai2024.css">
+    <script type="text/javascript" src="../js/miccai2024.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid" id="container-fluid-id">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="logo" class="logo-img">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="schedule.html">Schedule</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="winner-dropdown-menu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Challenge Tracks
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav-dropdown" aria-labelledby="winner-dropdown-menu">
+                            <li><a href="evaluation_protocol.html">Evaluation Protocol</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="metal_artifact_reduction.html">Metal Artifact Reduction</a></li>
+                            <li><a href="panoramic_winners.html">Multi-structure Segmentation</a></li>
+                            <li><a href="cbct_winners.html">Intraoral Scan-CBCT Registration</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="paper-dropdown-menu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Accepted Papers
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav-dropdown" aria-labelledby="paper-dropdown-menu">
+                            <li><a href="accepted_papers.html">Workshop Accepted Papers</a></li>
+                            <li><a href="challenge_publications.html">Challenge-Related Publications</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="organizers.html">Organizers</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="sts-dropdown-menu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Previous STS
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav-dropdown" aria-labelledby="sts-dropdown-menu">
+                            <li><a href="index2025.html">STS 2025 (Daejeon, Republic of Korea)</a></li>
+                            <li><a href="https://sts-challenge.github.io/miccai2024/index.html">STS 2024 (MARRAKESH, MOROCCO)</a></li>
+                            <li><a href="https://github.com/ricoleehduu/STS-Challenge">STS 2023 (Vancouver)</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="miccai2024-content" id="miccai2024">
+    <div class="slogan-content">
+        <div style="text-align: center;">
+            <h1 id="slogan-header">
+                STS 2026 <span class="slogan-detail">: The 4th Semi-supervised Teeth Segmentation Challenge on Metal Artifact Reduction and Beyond</span>
+            </h1>
+            <h2 class="slogan-location">
+                MICCAI 2026, Abu Dhabi, United Arab Emirates
+            </h2>
+            <h3 class="slogan-time">October 4-8, 2026</h3>
+        </div>
+    </div>
+
+    <div class="introduction-content main-content">
+        <h2 class="content-title">Track 1: Metal Artifact Reduction</h2>
+        <p>
+            Track 1 is the foundation task for STS 2026. It directly addresses the primary obstacle in CBCT-based
+            diagnosis and treatment planning for patients with metallic crowns, bridges or implants: streaks,
+            shadows and blooming artifacts that obscure anatomical structures.
+        </p>
+        <p>
+            A successful metal artifact reduction solution enables clearer visualization of anatomy and forms the
+            essential pre-processing step for downstream segmentation and registration. This task supports the
+            complete STS 2026 workflow by improving the quality of artifact-affected CBCT scans before core analysis
+            and fusion tasks are performed.
+        </p>
+        <p>
+            The Track 1 leaderboard will focus on the ability to restore clinically useful CBCT information while
+            preserving anatomical structures needed by the subsequent multi-structure segmentation and IOS-CBCT
+            registration tasks.
+        </p>
+        <p>
+            The latest public materials for STS 2026 will also be linked from the
+            <a href="https://github.com/ricoleehduu/STS-Challenge-2026" class="link-btn" target="_blank" rel="noopener noreferrer">official GitHub repository</a>.
+        </p>
+    </div>
+</div>
+
+<div class="footer-content" id="footer">
+    <p style="text-align: center">
+        Copyright @
+        <a href="https://www.cuz.edu.cn/" target="_blank" style="color: inherit">
+            College of Media Engineering, Communication University of Zhejiang, Hangzhou, 310018, China.
+        </a>
+    </p>
+</div>
+
+</body>
+</html>

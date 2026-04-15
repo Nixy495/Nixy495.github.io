@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semi-supervised Teeth Segmentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <meta name="author" content="STS Challenge">
+    <meta name="description" content="Website for STS Challenge at MICCAI Conferences.">
+    <meta name="keywords" content="MICCAI, MICCAI 2023, MICCAI 2024, MICCAI 2025, MICCAI 2026, STS, Semi-supervised Learning, Teeth Segmentation, Registration, Metal Artifact Reduction, Challenge">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="../jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../bootstrap/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/miccai2024.css">
+    <script type="text/javascript" src="../js/miccai2024.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid" id="container-fluid-id">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="logo" class="logo-img">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="schedule.html">Schedule</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="winner-dropdown-menu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Challenge Tracks
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav-dropdown" aria-labelledby="winner-dropdown-menu">
+                            <li><a href="evaluation_protocol.html">Evaluation Protocol</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="metal_artifact_reduction.html">Metal Artifact Reduction</a></li>
+                            <li><a href="panoramic_winners.html">Multi-structure Segmentation</a></li>
+                            <li><a href="cbct_winners.html">Intraoral Scan-CBCT Registration</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="paper-dropdown-menu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Accepted Papers
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav-dropdown" aria-labelledby="paper-dropdown-menu">
+                            <li><a href="accepted_papers.html">Workshop Accepted Papers</a></li>
+                            <li><a href="challenge_publications.html">Challenge-Related Publications</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="organizers.html">Organizers</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="sts-dropdown-menu"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Previous STS
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav-dropdown" aria-labelledby="sts-dropdown-menu">
+                            <li><a href="index2025.html">STS 2025 (Daejeon, Republic of Korea)</a></li>
+                            <li><a href="https://sts-challenge.github.io/miccai2024/index.html">STS 2024 (MARRAKESH, MOROCCO)</a></li>
+                            <li><a href="https://github.com/ricoleehduu/STS-Challenge">STS 2023 (Vancouver)</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="miccai2024-content" id="miccai2024">
+    <div class="slogan-content">
+        <div style="text-align: center;">
+            <h1 id="slogan-header">
+                STS 2026 <span class="slogan-detail">: The 4th Semi-supervised Teeth Segmentation Challenge on Metal Artifact Reduction and Beyond</span>
+            </h1>
+            <h2 class="slogan-location">
+                MICCAI 2026, Abu Dhabi, United Arab Emirates
+            </h2>
+            <h3 class="slogan-time">October 4-8, 2026</h3>
+        </div>
+    </div>
+
+    <div class="introduction-content main-content">
+        <h2 class="content-title">Evaluation Protocol</h2>
+        <p>
+            STS 2026 follows the three-task structure defined in the official challenge design document: Metal
+            Artifact Reduction as the foundation task, Multi-structure Segmentation as the core analysis task, and
+            Intraoral Scan-CBCT Registration as the fusion application task.
+        </p>
+
+        <h3>Evaluation Tracks</h3>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tb-head-time">Track</th>
+                    <th class="tb-head-talk">Submission</th>
+                    <th class="tb-head-speaker">Assessment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Track 1: Metal Artifact Reduction</td>
+                    <td>Artifact-reduced CBCT volumes for cases with crowns, bridges or implants.</td>
+                    <td class="last-column">Restoration quality and downstream usability for dental analysis.</td>
+                </tr>
+                <tr>
+                    <td>Track 2: Multi-structure Segmentation</td>
+                    <td>Segmentation masks for FDI-numbered teeth, dental implants and maxillary sinuses.</td>
+                    <td class="last-column">DSC and HD95 are reported as independent ranking dimensions.</td>
+                </tr>
+                <tr>
+                    <td>Track 3: Intraoral Scan-CBCT Registration</td>
+                    <td>Rigid transformation matrix aligning the IOS crown surface to the CBCT volume.</td>
+                    <td class="last-column">MTE and MRE are used to measure geometric alignment accuracy.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Metrics</h3>
+        <ul>
+            <li>Dice Similarity Coefficient (DSC): segmentation overlap.</li>
+            <li>95% Hausdorff Distance (HD95): segmentation boundary accuracy.</li>
+            <li>Mean Translation Error (MTE): registration translation accuracy.</li>
+            <li>Mean Rotation Error (MRE): registration rotation accuracy.</li>
+        </ul>
+        <p>
+            DSC and HD95 are intentionally kept separate for Track 2. HD95 is the primary ranking criterion because
+            metal artifact blooming mainly corrupts anatomical boundaries, and boundary fidelity is clinically
+            important for artifact-affected CBCT analysis. DSC is used as the tiebreaker.
+        </p>
+
+        <h3>Ranking Rules</h3>
+        <ul>
+            <li>Track 1 evaluates metal artifact reduction as the foundation task for downstream CBCT analysis.</li>
+            <li>Track 2 reports Rank_DSC and Rank_HD95 separately, averaged across all segmentation targets and test cases.</li>
+            <li>The Track 2 winner is determined by Rank_HD95, with Rank_DSC used as the tiebreaker.</li>
+            <li>Track 3 ranks teams by registration accuracy using MTE and MRE.</li>
+            <li>Missing or failed test-case results receive the worst possible score, such as DSC=0 or HD95=infinity.</li>
+        </ul>
+
+        <h3>Dataset Split</h3>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tb-head-time">Split</th>
+                    <th class="tb-head-talk">Cases</th>
+                    <th class="tb-head-speaker">Provided Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Training (Labeled)</td>
+                    <td>40</td>
+                    <td class="last-column">CBCT, IOS, segmentation masks and registration matrices.</td>
+                </tr>
+                <tr>
+                    <td>Training (Unlabeled)</td>
+                    <td>219</td>
+                    <td class="last-column">Raw CBCT and IOS data for semi-supervised learning.</td>
+                </tr>
+                <tr>
+                    <td>Validation</td>
+                    <td>20</td>
+                    <td class="last-column">Raw CBCT and IOS data; ground truth withheld for server evaluation.</td>
+                </tr>
+                <tr>
+                    <td>Test</td>
+                    <td>100</td>
+                    <td class="last-column">Raw CBCT and IOS data; hidden ground truth for final ranking.</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>379</td>
+                    <td class="last-column">All cases include metallic restorations and metal artifacts.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            The labeled training set and test set share the same metal artifact severity stratification: 30% mild,
+            40% moderate and 30% severe. This mirrored distribution keeps the task definition stable and evaluates
+            robustness to metal artifacts rather than unexpected domain shift.
+        </p>
+
+        <h3>Statistical Analysis</h3>
+        <p>
+            The organizers will estimate 95% confidence intervals using bootstrap analysis, compare top teams with
+            paired Wilcoxon signed-rank tests, and report variability with standard deviation, interquartile range and
+            box-and-whisker plots. Additional analyses will include artifact severity stratification, semi-supervised
+            learning efficacy and inter-rater reliability by artifact subgroup.
+        </p>
+
+        <p>
+            The latest public materials for STS 2026 will also be linked from the
+            <a href="https://github.com/ricoleehduu/STS-Challenge-2026" class="link-btn" target="_blank" rel="noopener noreferrer">official GitHub repository</a>.
+        </p>
+    </div>
+</div>
+
+<div class="footer-content" id="footer">
+    <p style="text-align: center">
+        Copyright @
+        <a href="https://www.cuz.edu.cn/" target="_blank" style="color: inherit">
+            College of Media Engineering, Communication University of Zhejiang, Hangzhou, 310018, China.
+        </a>
+    </p>
+</div>
+
+</body>
+</html>
