@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,7 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <meta name="author" content="STS Challenge">
     <meta name="description" content="Website for STS Challenge at MICCAI Conferences.">
-    <meta name="keywords"
-        content="MICCAI, MICCAI 2023, MICCAI 2024, MICCAI 2025, MICCAI 2026, STS, Semi-supervised Learning, Teeth Segmentation, Registration, Metal Artifact Reduction, Challenge">
+    <meta name="keywords" content="MICCAI, MICCAI 2023, MICCAI 2024, MICCAI 2025, MICCAI 2026, STS, Semi-supervised Learning, Teeth Segmentation, Registration, Metal Artifact Reduction, Challenge">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script type="text/javascript" src="../jquery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
@@ -105,65 +104,35 @@
     </div>
 
     <div class="introduction-content main-content">
-        <h2 class="content-title">Important Dates and Timeline</h2>
+        <h2 class="content-title">Task 3: MMDental Multimodal Analysis</h2>
         <p>
-            STS 2026 is planned as an online challenge hosted on Codabench, with the challenge community meeting
-            during MICCAI 2026 in Abu Dhabi. The table below follows the timetable in the official 2026 challenge
-            design document.
+            Task 3 is based on the MMDental dataset described in
+            <em>MMDental: A multimodal dataset of tooth CBCT images with expert medical records</em>
+            (Scientific Data, 2025). It extends STS 2026 from image-only analysis toward multimodal dental AI.
         </p>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tb-head-time">Date</th>
-                    <th class="tb-head-talk">Milestone</th>
-                    <th class="tb-head-speaker">Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>April 1, 2026</td>
-                    <td>Registration opens and training data released</td>
-                    <td class="last-column">Labeled and unlabeled training cases become available.</td>
-                </tr>
-                <tr>
-                    <td>June 1, 2026</td>
-                    <td>Validation data released</td>
-                    <td class="last-column">The validation evaluation server opens for preliminary submissions.</td>
-                </tr>
-                <tr>
-                    <td>July 15, 2026</td>
-                    <td>Docker submission portal opens</td>
-                    <td class="last-column">Teams can submit Docker containers for the final test set.</td>
-                </tr>
-                <tr>
-                    <td>August 1, 2026</td>
-                    <td>Final submission deadline</td>
-                    <td class="last-column">Final test submissions close.</td>
-                </tr>
-                <tr>
-                    <td>August 15, 2026</td>
-                    <td>Results announcement and workshop invitations</td>
-                    <td class="last-column">Top teams are announced and invited to the STS 2026 satellite event.</td>
-                </tr>
-                <tr>
-                    <td>October 4 and 8, 2026</td>
-                    <td>MICCAI 2026 satellite events</td>
-                    <td class="last-column">Satellite event window for challenge-related activities.</td>
-                </tr>
-                <tr>
-                    <td>October 5-7, 2026</td>
-                    <td>MICCAI 2026 main conference</td>
-                    <td class="last-column">Main conference dates in Abu Dhabi, United Arab Emirates.</td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="margin-top: 24px;">
-            Evaluation code and platform instructions will be published through the official
-            <a href="https://github.com/ricoleehduu/STS-Challenge-2026" class="link-btn" target="_blank" rel="noopener noreferrer">STS 2026 GitHub repository</a>
-            and the Codabench competition platform.
+        <p>
+            The task uses tooth CBCT images together with expert medical records, including clinical descriptions,
+            initial diagnoses and follow-up documentation. Participants are expected to build methods that connect
+            visual CBCT evidence with structured clinical context for dental diagnosis, reporting and treatment
+            reasoning.
+        </p>
+        <p>
+            This multimodal task highlights the broader clinical workflow around dental CBCT: not only locating
+            anatomy, but also interpreting patient-level information with expert documentation. Detailed submission
+            requirements and evaluation metrics will be released with the Task 3 protocol.
+        </p>
+        <p>
+            The reference paper for this task is available here:
+            <a href="files/s41597-025-05398-7.pdf" class="link-btn" target="_blank" rel="noopener noreferrer">MMDental dataset paper</a>.
+        </p>
+        <p>
+            The Task 3 leaderboard and winners will be announced after the final evaluation phase is complete.
+        </p>
+        <p>
+            The latest public materials for STS 2026 will also be linked from the
+            <a href="https://github.com/ricoleehduu/STS-Challenge-2026" class="link-btn" target="_blank" rel="noopener noreferrer">official GitHub repository</a>.
         </p>
     </div>
-
 </div>
 
 <div class="footer-content" id="footer">

@@ -44,15 +44,15 @@
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="winner-dropdown-menu"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Challenge Tracks
+                            Challenge Tasks
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu nav-dropdown" aria-labelledby="winner-dropdown-menu">
                             <li><a href="evaluation_protocol.html">Evaluation Protocol</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="metal_artifact_reduction.html">Metal Artifact Reduction</a></li>
-                            <li><a href="panoramic_winners.html">Multi-structure Segmentation</a></li>
-                            <li><a href="cbct_winners.html">Intraoral Scan-CBCT Registration</a></li>
+                            <li><a href="cbct_teeth_segmentation.html">Metal Artifact CBCT Teeth Segmentation</a></li>
+                            <li><a href="cbct_ios_registration.html">CBCT-IOS Registration</a></li>
+                            <li><a href="mmdental_multimodal.html">MMDental Multimodal Analysis</a></li>
                         </ul>
                     </div>
                 </li>
@@ -106,35 +106,35 @@
     <div class="introduction-content main-content">
         <h2 class="content-title">Evaluation Protocol</h2>
         <p>
-            STS 2026 follows the three-task structure defined in the official challenge design document: Metal
-            Artifact Reduction as the foundation task, Multi-structure Segmentation as the core analysis task, and
-            Intraoral Scan-CBCT Registration as the fusion application task.
+            STS 2026 is organized into three tasks: metal artifact CBCT teeth segmentation, CBCT-IOS registration
+            and MMDental multimodal analysis. Together, they cover robust CBCT tooth analysis, cross-modal dental
+            geometry fusion and multimodal clinical reasoning.
         </p>
 
-        <h3>Evaluation Tracks</h3>
+        <h3>Evaluation Tasks</h3>
         <table class="tg">
             <thead>
                 <tr>
-                    <th class="tb-head-time">Track</th>
+                    <th class="tb-head-time">Task</th>
                     <th class="tb-head-talk">Submission</th>
                     <th class="tb-head-speaker">Assessment</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Track 1: Metal Artifact Reduction</td>
-                    <td>Artifact-reduced CBCT volumes for cases with crowns, bridges or implants.</td>
-                    <td class="last-column">Restoration quality and downstream usability for dental analysis.</td>
+                    <td>Task 1: Metal Artifact CBCT Teeth Segmentation</td>
+                    <td>Tooth segmentation masks for CBCT scans affected by metal artifacts.</td>
+                    <td class="last-column">DSC and HD95 measure segmentation overlap and boundary accuracy.</td>
                 </tr>
                 <tr>
-                    <td>Track 2: Multi-structure Segmentation</td>
-                    <td>Segmentation masks for FDI-numbered teeth, dental implants and maxillary sinuses.</td>
-                    <td class="last-column">DSC and HD95 are reported as independent ranking dimensions.</td>
-                </tr>
-                <tr>
-                    <td>Track 3: Intraoral Scan-CBCT Registration</td>
+                    <td>Task 2: CBCT-IOS Registration</td>
                     <td>Rigid transformation matrix aligning the IOS crown surface to the CBCT volume.</td>
-                    <td class="last-column">MTE and MRE are used to measure geometric alignment accuracy.</td>
+                    <td class="last-column">MTE and MRE measure geometric alignment accuracy.</td>
+                </tr>
+                <tr>
+                    <td>Task 3: MMDental Multimodal Analysis</td>
+                    <td>Model outputs generated from tooth CBCT images and expert medical records.</td>
+                    <td class="last-column">Task-specific multimodal diagnosis, reporting and reasoning metrics will be released with the protocol.</td>
                 </tr>
             </tbody>
         </table>
@@ -145,19 +145,19 @@
             <li>95% Hausdorff Distance (HD95): segmentation boundary accuracy.</li>
             <li>Mean Translation Error (MTE): registration translation accuracy.</li>
             <li>Mean Rotation Error (MRE): registration rotation accuracy.</li>
+            <li>Task 3 multimodal metrics will assess consistency between CBCT evidence and expert clinical records.</li>
         </ul>
         <p>
-            DSC and HD95 are intentionally kept separate for Track 2. HD95 is the primary ranking criterion because
-            metal artifact blooming mainly corrupts anatomical boundaries, and boundary fidelity is clinically
-            important for artifact-affected CBCT analysis. DSC is used as the tiebreaker.
+            DSC and HD95 are intentionally kept separate for Task 1. HD95 is emphasized because metal artifact
+            blooming mainly corrupts anatomical boundaries, and boundary fidelity is clinically important for
+            artifact-affected CBCT analysis. DSC is used to report overlap quality.
         </p>
 
         <h3>Ranking Rules</h3>
         <ul>
-            <li>Track 1 evaluates metal artifact reduction as the foundation task for downstream CBCT analysis.</li>
-            <li>Track 2 reports Rank_DSC and Rank_HD95 separately, averaged across all segmentation targets and test cases.</li>
-            <li>The Track 2 winner is determined by Rank_HD95, with Rank_DSC used as the tiebreaker.</li>
-            <li>Track 3 ranks teams by registration accuracy using MTE and MRE.</li>
+            <li>Task 1 reports Rank_DSC and Rank_HD95 for metal artifact CBCT teeth segmentation.</li>
+            <li>Task 2 ranks teams by registration accuracy using MTE and MRE.</li>
+            <li>Task 3 will use a separate leaderboard based on the released MMDental multimodal protocol.</li>
             <li>Missing or failed test-case results receive the worst possible score, such as DSC=0 or HD95=infinity.</li>
         </ul>
 

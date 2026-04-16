@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,7 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <meta name="author" content="STS Challenge">
     <meta name="description" content="Website for STS Challenge at MICCAI Conferences.">
-    <meta name="keywords"
-        content="MICCAI, MICCAI 2023, MICCAI 2024, MICCAI 2025, MICCAI 2026, STS, Semi-supervised Learning, Teeth Segmentation, Registration, Metal Artifact Reduction, Challenge">
+    <meta name="keywords" content="MICCAI, MICCAI 2023, MICCAI 2024, MICCAI 2025, MICCAI 2026, STS, Semi-supervised Learning, Teeth Segmentation, Registration, Metal Artifact Reduction, Challenge">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script type="text/javascript" src="../jquery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
@@ -105,65 +104,30 @@
     </div>
 
     <div class="introduction-content main-content">
-        <h2 class="content-title">Important Dates and Timeline</h2>
+        <h2 class="content-title">Task 2: CBCT-IOS Registration</h2>
         <p>
-            STS 2026 is planned as an online challenge hosted on Codabench, with the challenge community meeting
-            during MICCAI 2026 in Abu Dhabi. The table below follows the timetable in the official 2026 challenge
-            design document.
+            Task 2 evaluates registration between dental CBCT volumes and intraoral scans (IOS). The goal is to
+            align high-resolution IOS crown-surface geometry with CBCT root and bone information, producing a
+            complete digital patient model for treatment planning.
         </p>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tb-head-time">Date</th>
-                    <th class="tb-head-talk">Milestone</th>
-                    <th class="tb-head-speaker">Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>April 1, 2026</td>
-                    <td>Registration opens and training data released</td>
-                    <td class="last-column">Labeled and unlabeled training cases become available.</td>
-                </tr>
-                <tr>
-                    <td>June 1, 2026</td>
-                    <td>Validation data released</td>
-                    <td class="last-column">The validation evaluation server opens for preliminary submissions.</td>
-                </tr>
-                <tr>
-                    <td>July 15, 2026</td>
-                    <td>Docker submission portal opens</td>
-                    <td class="last-column">Teams can submit Docker containers for the final test set.</td>
-                </tr>
-                <tr>
-                    <td>August 1, 2026</td>
-                    <td>Final submission deadline</td>
-                    <td class="last-column">Final test submissions close.</td>
-                </tr>
-                <tr>
-                    <td>August 15, 2026</td>
-                    <td>Results announcement and workshop invitations</td>
-                    <td class="last-column">Top teams are announced and invited to the STS 2026 satellite event.</td>
-                </tr>
-                <tr>
-                    <td>October 4 and 8, 2026</td>
-                    <td>MICCAI 2026 satellite events</td>
-                    <td class="last-column">Satellite event window for challenge-related activities.</td>
-                </tr>
-                <tr>
-                    <td>October 5-7, 2026</td>
-                    <td>MICCAI 2026 main conference</td>
-                    <td class="last-column">Main conference dates in Abu Dhabi, United Arab Emirates.</td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="margin-top: 24px;">
-            Evaluation code and platform instructions will be published through the official
-            <a href="https://github.com/ricoleehduu/STS-Challenge-2026" class="link-btn" target="_blank" rel="noopener noreferrer">STS 2026 GitHub repository</a>
-            and the Codabench competition platform.
+        <p>
+            Teams submit the rigid spatial transformation matrix that aligns the IOS mesh to the corresponding CBCT
+            volume. The task is designed for complex cases where CBCT appearance may be degraded by metal artifacts,
+            while IOS still provides precise crown-surface structure.
+        </p>
+        <p>
+            Registration performance is assessed with Mean Translation Error (MTE) and Mean Rotation Error (MRE),
+            consistent with the STS 2026 challenge design document and previous STS registration evaluation
+            practice.
+        </p>
+        <p>
+            The Task 2 leaderboard and winners will be announced after the final evaluation phase is complete.
+        </p>
+        <p>
+            The latest public materials for STS 2026 will also be linked from the
+            <a href="https://github.com/ricoleehduu/STS-Challenge-2026" class="link-btn" target="_blank" rel="noopener noreferrer">official GitHub repository</a>.
         </p>
     </div>
-
 </div>
 
 <div class="footer-content" id="footer">

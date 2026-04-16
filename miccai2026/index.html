@@ -48,15 +48,15 @@
                             <button class="btn btn-default dropdown-toggle btn-flatten" type="button"
                                 id="winner-dropdown-menu" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="true">
-                                Challenge Tracks
+                                Challenge Tasks
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu nav-dropdown" aria-labelledby="winner-dropdown-menu">
                                 <li><a href="evaluation_protocol.html">Evaluation Protocol</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="metal_artifact_reduction.html">Metal Artifact Reduction</a></li>
-                                <li><a href="panoramic_winners.html">Multi-structure Segmentation</a></li>
-                                <li><a href="cbct_winners.html">Intraoral Scan-CBCT Registration</a></li>
+                                <li><a href="cbct_teeth_segmentation.html">Metal Artifact CBCT Teeth Segmentation</a></li>
+                                <li><a href="cbct_ios_registration.html">CBCT-IOS Registration</a></li>
+                                <li><a href="mmdental_multimodal.html">MMDental Multimodal Analysis</a></li>
                             </ul>
                         </div>
                     </li>
@@ -133,27 +133,27 @@
                 robust when metal artifacts affect both anatomical segmentation and cross-modal IOS-CBCT alignment.
             </p>
             <p>
-                The challenge is organized around three connected tasks. Metal Artifact Reduction is the foundation
-                task that restores clearer CBCT anatomy. Multi-structure Segmentation is the core analysis task for
-                FDI-numbered teeth, dental implants and maxillary sinuses. Intraoral Scan-CBCT Registration is the
-                fusion task that combines IOS crown surfaces with CBCT root and bone information to support complete
-                digital patient models.
+                The challenge is organized around three tasks. Task 1 focuses on CBCT teeth segmentation in scans
+                affected by metal artifacts. Task 2 evaluates CBCT-IOS registration for cross-modal dental model
+                fusion. Task 3 is based on the MMDental dataset, extending the challenge toward multimodal dental
+                AI that connects tooth CBCT images with expert medical records.
             </p>
 
             <div class="row track-card-row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="panel panel-default p-panel">
                         <div class="panel-heading p-panel-heading">
-                            <h3 class="panel-title">Track 1: Metal Artifact Reduction</h3>
+                            <h3 class="panel-title">Task 1: Metal Artifact CBCT Teeth Segmentation</h3>
                         </div>
                         <div class="panel-body p-panel-body">
-                            <div class="track-visual track-visual-placeholder" aria-label="Metal artifact reduction image placeholder"></div>
+                            <div class="track-visual track-visual-placeholder" aria-label="Metal artifact CBCT teeth segmentation image placeholder"></div>
                             <p class="small-text">
-                                Remove streaks and shadows caused by crowns, bridges and implants in CBCT scans,
-                                creating the essential pre-processing step for all subsequent dental analysis.
+                                Segment teeth from CBCT scans containing metal artifacts caused by restorations,
+                                crowns or implants, with emphasis on robust tooth boundary recovery under streaking
+                                and blooming interference.
                             </p>
                             <p class="track-action">
-                                <a href="metal_artifact_reduction.html"
+                                <a href="cbct_teeth_segmentation.html"
                                     class="p-join-btn breathing-btn" target="_blank" rel="noopener noreferrer">
                                     CLICK ME TO JOIN <span class="join-logo" aria-hidden="true">&#128293;</span>
                                 </a>
@@ -164,16 +164,16 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="panel panel-default c-panel">
                         <div class="panel-heading c-panel-heading">
-                            <h3 class="panel-title">Track 2: Multi-structure Segmentation</h3>
+                            <h3 class="panel-title">Task 2: CBCT-IOS Registration</h3>
                         </div>
                         <div class="panel-body c-panel-body">
-                            <div class="track-visual track-visual-placeholder" aria-label="Multi-structure segmentation image placeholder"></div>
+                            <div class="track-visual track-visual-placeholder" aria-label="CBCT-IOS registration image placeholder"></div>
                             <p class="small-text">
-                                Segment FDI-numbered teeth, dental implants and maxillary sinuses to support
-                                treatment planning, postoperative assessment and safe posterior implant placement.
+                                Align intraoral scan crown surfaces with CBCT volumes, combining high-resolution
+                                IOS geometry with CBCT root and bone information for complete digital patient models.
                             </p>
                             <p class="track-action">
-                                <a href="panoramic_winners.html"
+                                <a href="cbct_ios_registration.html"
                                     class="c-join-btn breathing-btn" target="_blank" rel="noopener noreferrer">
                                     CLICK ME TO JOIN <span class="join-logo" aria-hidden="true">&#128293;</span>
                                 </a>
@@ -184,16 +184,16 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="panel panel-default p-panel">
                         <div class="panel-heading p-panel-heading">
-                            <h3 class="panel-title">Track 3: Intraoral Scan-CBCT Registration</h3>
+                            <h3 class="panel-title">Task 3: MMDental Multimodal Analysis</h3>
                         </div>
                         <div class="panel-body p-panel-body">
-                            <div class="track-visual track-visual-placeholder" aria-label="Intraoral scan-CBCT registration image placeholder"></div>
+                            <div class="track-visual track-visual-placeholder" aria-label="MMDental multimodal task image placeholder"></div>
                             <p class="small-text">
-                                Fuse high-resolution IOS crown geometry with CBCT root and bone information to
-                                build complete digital patient models for guided surgery and treatment planning.
+                                Use tooth CBCT images together with expert medical records, initial diagnoses and
+                                follow-up documentation to support multimodal dental diagnosis and clinical reasoning.
                             </p>
                             <p class="track-action">
-                                <a href="cbct_winners.html"
+                                <a href="mmdental_multimodal.html"
                                     class="p-join-btn breathing-btn" target="_blank" rel="noopener noreferrer">
                                     CLICK ME TO JOIN <span class="join-logo" aria-hidden="true">&#128293;</span>
                                 </a>
@@ -208,8 +208,8 @@
             <h2 class="content-title">Updates</h2>
             <p>
                 The 2026 edition introduces a metal-artifact-centered benchmark for real-world dental AI. The
-                website now follows the official three-task structure from the challenge PDF: metal artifact
-                reduction, multi-structure segmentation and intraoral scan-CBCT registration.
+                website now follows the updated three-task structure: metal artifact CBCT teeth segmentation,
+                CBCT-IOS registration and MMDental multimodal analysis.
             </p>
 
             <ul>
