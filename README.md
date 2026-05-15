@@ -1,30 +1,57 @@
-<div align="center">
-  <img src="docs/sts2024-logo.png"/>
-  <div>&nbsp;</div>
-  <div align="center">
-    <b>Codabench website</b>
-    <sup>
-      <a href="https://www.codabench.org/competitions/3024">
-        <i>HOT</i>
-      </a>
-    </sup>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Challenge baselines</b>
-    <sup>
-      <a href="#">
-        <i>TRY IT OUT</i>
-      </a>
-    </sup>
-  </div>
-  <div>&nbsp;</div>
-</div
+# STS 2026 Website
 
-Computer-aided diagnosis tools are popular in dental practice for treatment planning and prognosis evaluation.
-However, limited labeled cases hinder the development of deep learning algorithms.
-To address this, we organized the STS Challenge on semi-supervised learning to advance these diagnostic tools in dentistry.
+This repository hosts the website for **STS 2026: The 4th Semi-supervised Teeth Segmentation Challenge on Metal Artifact Reduction and Beyond**.
+
+- Website: [Nixy495.github.io/miccai2026](https://nixy495.github.io/miccai2026/index.html)
+- MICCAI 2026: Strasbourg, France
+- Dates: September 27-October 1, 2026
+
+## Overview
+
+STS 2026 focuses on artifact-resilient dental AI under real clinical conditions. The challenge uses multi-center dental data containing metallic restorations, crowns, bridges, and implants, and targets robust learning for segmentation, registration, and multimodal analysis.
+
+## Pre-Task
+
+Teams must first complete the qualification pre-task before applying for official challenge data access.
+
+- Pre-Task: [2D Images Segmentation Qualification](https://www.codabench.org/competitions/16040/)
+
+## Challenge Tasks
+
+1. **Task 1: Metal Artifact CBCT Teeth Segmentation**  
+   Segment teeth from CBCT scans affected by metal artifacts.  
+   Codabench: [Competition 16027](https://www.codabench.org/competitions/16027/)
+
+2. **Task 2: CBCT-IOS Registration**  
+   Align intraoral scan crown surfaces with CBCT volumes to build complete digital dental models.  
+   Codabench: [Competition 16042](https://www.codabench.org/competitions/16042/)
+
+3. **Task 3: MMDental Multimodal Analysis**  
+   Combine tooth CBCT images with expert medical records for multimodal dental diagnosis and clinical reasoning.  
+   Codabench: [Competition 16117](https://www.codabench.org/competitions/16117/)
+
+## Important Dates
+
+- May 11, 2026: Registration opens; training and validation data are released
+- July 15, 2026: Docker submission portal opens
+- August 1, 2026: Final submission deadline
+- August 15, 2026: Results announcement
+- September 27-October 1, 2026: MICCAI 2026
+
+## Website Structure
+
+- `miccai2026/`: STS 2026 website pages
+- `css/`: shared stylesheets
+- `js/`: shared scripts
+- `bootstrap/`, `jquery/`: frontend dependencies
 
 ## Previous STS
 
-<b>STS 2023: Tooth region segmentation in 2D panoramic X-ray images and 3D dental CBCT scans _(still open)_.</b><br/>
+- STS 2025: [MICCAI STSR 2025 Website](https://nixy495.github.io/miccai2026/index2025.html)
+- STS 2024: [MICCAI STS 2024 Website](https://sts-challenge.github.io/miccai2024/index.html)
+- STS 2023: [STS 2023 Repository](https://github.com/ricoleehduu/STS-Challenge)
 
-<a href='https://tianchi.aliyun.com/competition/entrance/532086'><img src='https://img.shields.io/badge/2D panoramic Xray track-Website-Green'></a> <a href='https://tianchi.aliyun.com/competition/entrance/532087'><img src='https://img.shields.io/badge/3D dental CBCT track-Website-orange'></a> <a href='https://arxiv.org/abs/2407.13246'><img src='https://img.shields.io/badge/Overiew Paper-PDF-purple'></a>
+## Contact
+
+- [SemiTeethSegChallenge@outlook.com](mailto:SemiTeethSegChallenge@outlook.com)
+- [zhi.li@hdu.edu.cn](mailto:zhi.li@hdu.edu.cn)
