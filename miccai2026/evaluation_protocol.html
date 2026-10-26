@@ -42,6 +42,23 @@
                 <li><a href="schedule.html">Schedule</a></li>
                 <li>
                     <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-flatten" type="button"
+                                id="winners-dropdown-menu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            Challenge Winners
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav-dropdown" aria-labelledby="winners-dropdown-menu">
+                            <li><a href="evaluation_protocol.html">Evaluation Protocol</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="task1_winners.html">Task 1: Metal Artifact CBCT Teeth Segmentation</a></li>
+                            <li><a href="task2_winners.html">Task 2: CBCT-IOS Registration</a></li>
+                            <li><a href="task3_winners.html">Task 3: MMDental Multimodal Analysis</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle btn-flatten" type="button" id="winner-dropdown-menu"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Challenge Tasks
@@ -123,42 +140,43 @@
             <tbody>
                 <tr>
                     <td>Task 1: Metal Artifact CBCT Teeth Segmentation</td>
-                    <td>Tooth segmentation masks for CBCT scans affected by metal artifacts.</td>
-                    <td class="last-column">DSC and HD95 measure segmentation overlap and boundary accuracy.</td>
+                    <td>Tooth and root-canal segmentation masks for CBCT scans affected by metal artifacts.</td>
+                    <td class="last-column">Image- and instance-level Dice, mIoU and NSD plus Identification Accuracy (IA); the final Challenge_Score combines them.</td>
                 </tr>
                 <tr>
                     <td>Task 2: CBCT-IOS Registration</td>
-                    <td>Rigid transformation matrix aligning the IOS crown surface to the CBCT volume.</td>
-                    <td class="last-column">MTE and MRE measure geometric alignment accuracy.</td>
+                    <td>Rigid transformation matrices (upper and lower jaw) aligning the IOS crown surface to the CBCT volume.</td>
+                    <td class="last-column">Mean Translation Error (MTE, mm) and Mean Rotation Error (MRE, degree); lower is better.</td>
                 </tr>
                 <tr>
                     <td>Task 3: MMDental Multimodal Analysis</td>
-                    <td>Model outputs generated from tooth CBCT images and expert medical records.</td>
-                    <td class="last-column">Task-specific multimodal diagnosis, reporting and reasoning metrics will be released with the protocol.</td>
+                    <td>Structured seven-field dental reports generated from CBCT volumes and expert records.</td>
+                    <td class="last-column">Weighted composite of text-overlap metrics, FDI tooth-notation, diagnosis-code and treatment-plan agreement, and field completion.</td>
                 </tr>
             </tbody>
         </table>
 
         <h3>Metrics</h3>
         <ul>
-            <li>Dice Similarity Coefficient (DSC): segmentation overlap.</li>
-            <li>95% Hausdorff Distance (HD95): segmentation boundary accuracy.</li>
-            <li>Mean Translation Error (MTE): registration translation accuracy.</li>
-            <li>Mean Rotation Error (MRE): registration rotation accuracy.</li>
-            <li>Task 3 multimodal metrics will assess consistency between CBCT evidence and expert clinical records.</li>
+            <li>Task 1 &mdash; Dice, mIoU and NSD are computed at image level (whole dentition foreground) and instance level (per tooth / root-canal label); Identification Accuracy (IA) counts labels with IoU &ge; 0.5.</li>
+            <li>Task 1 &mdash; Challenge_Score = 0.15 &times; image_score + 0.75 &times; instance_score + 0.10 &times; IA, where image_score is the mean of image-level Dice, mIoU and NSD and instance_score = 0.35 &times; Dice + 0.25 &times; mIoU + 0.40 &times; NSD at instance level. Cases containing metal artifacts are weighted &times; 2.</li>
+            <li>Task 2 &mdash; Mean Translation Error (MTE, mm) and Mean Rotation Error (MRE, degree) between the predicted and reference rigid transformations, averaged over the upper and lower jaws; lower is better.</li>
+            <li>Task 3 &mdash; Weighted_Score is a weighted combination of BLEU-1/2/3/4, ROUGE-L, METEOR, FDI tooth-notation precision/recall/F1, diagnosis-code recall, treatment-plan recall and report field-completion rate.</li>
+            <li>Segmentation efficiency (running time, GPU memory) is not part of the 2026 ranking.</li>
         </ul>
         <p>
-            DSC and HD95 are intentionally kept separate for Task 1. HD95 is emphasized because metal artifact
-            blooming mainly corrupts anatomical boundaries, and boundary fidelity is clinically important for
-            artifact-affected CBCT analysis. DSC is used to report overlap quality.
+            Task 1 keeps image-level and instance-level metrics separate because metal-artifact blooming mainly
+            corrupts anatomical boundaries and small structures such as root canals, while overall image overlap may
+            remain high. Instance-level metrics and IA therefore carry most of the weight in the final score.
         </p>
 
         <h3>Ranking Rules</h3>
         <ul>
-            <li>Task 1 reports Rank_DSC and Rank_HD95 for metal artifact CBCT teeth segmentation.</li>
-            <li>Task 2 ranks teams by registration accuracy using MTE and MRE.</li>
-            <li>Task 3 will use a separate leaderboard based on the released MMDental multimodal protocol.</li>
-            <li>Missing or failed test-case results receive the worst possible score, such as DSC=0 or HD95=infinity.</li>
+            <li>Task 1 ranks teams by Challenge_Score (higher is better).</li>
+            <li>Task 2 ranks teams by registration accuracy, using MTE as the primary metric and MRE as the secondary metric (both lower is better).</li>
+            <li>Task 3 ranks teams by Weighted_Score (higher is better).</li>
+            <li>The official final ranking of all three tasks is determined by the Docker test evaluation on the hidden test set; the Codabench validation leaderboard is not used for the final ranking.</li>
+            <li>Missing or failed predictions receive the worst possible score for the affected cases (for example Dice = 0 for Task 1, and fixed penalties of 1,000,000 mm / 180&deg; for failed Task 2 pairs).</li>
         </ul>
 
         <h3>Dataset Split</h3>

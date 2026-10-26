@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>STS 2026 Task 3 Winners | Semi-supervised Teeth Segmentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <meta name="author" content="STS Challenge">
+    <meta name="description" content="Official final results and winners of Task 3 Winners: MMDental Multimodal Analysis at the STS 2026 MICCAI Challenge.">
+    <meta name="keywords"
+        content="MICCAI, MICCAI 2023, MICCAI 2024, MICCAI 2025, MICCAI 2026, STS, Semi-supervised Learning, Teeth Segmentation, Registration, Metal Artifact Reduction, Dental CBCT, IOS, Challenge">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="../jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../bootstrap/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/miccai2024.css">
+    <script type="text/javascript" src="../js/miccai2024.js"></script>
+    <style>
+        .winner-table tr.winner-medal-gold > td { background-color: #fff7e0; }
+        .winner-table tr.winner-medal-silver > td { background-color: #f5f5f5; }
+        .winner-table tr.winner-medal-bronze > td { background-color: #fbeee7; }
+        .winner-medal-gold .winner-team-name, .winner-medal-silver .winner-team-name,
+        .winner-medal-bronze .winner-team-name { font-weight: bold; }
+        .winner-table td.winner-rank-cell { font-weight: bold; }
+        .winner-table td.winner-status-error { color: #b03a2e; }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" id="container-fluid-id">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="logo" class="logo-img">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-flatten" type="button"
+                                    id="winners-dropdown-menu" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Challenge Winners
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu nav-dropdown" aria-labelledby="winners-dropdown-menu">
+                                <li><a href="evaluation_protocol.html">Evaluation Protocol</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="task1_winners.html">Task 1: Metal Artifact CBCT Teeth Segmentation</a></li>
+                                <li><a href="task2_winners.html">Task 2: CBCT-IOS Registration</a></li>
+                                <li><a href="task3_winners.html">Task 3: MMDental Multimodal Analysis</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-flatten" type="button"
+                                id="winner-dropdown-menu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                                Challenge Tasks
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu nav-dropdown" aria-labelledby="winner-dropdown-menu">
+                                <li><a href="evaluation_protocol.html">Evaluation Protocol</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="cbct_teeth_segmentation.html">Metal Artifact CBCT Teeth Segmentation</a></li>
+                                <li><a href="cbct_ios_registration.html">CBCT-IOS Registration</a></li>
+                                <li><a href="mmdental_multimodal.html">MMDental Multimodal Analysis</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-flatten" type="button"
+                                id="paper-dropdown-menu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                                Accepted Papers
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu nav-dropdown" aria-labelledby="paper-dropdown-menu">
+                                <li><a href="accepted_papers.html">Workshop Accepted Papers</a></li>
+                                <li><a href="challenge_publications.html">Challenge-Related Publications</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a href="organizers.html">Organizers</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-flatten" type="button"
+                                id="sts-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Previous STS
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu nav-dropdown" aria-labelledby="sts-dropdown-menu">
+                                <li><a href="index2025.html">STS 2025 (Daejeon, Republic of Korea)</a></li>
+                                <li><a href="https://sts-challenge.github.io/miccai2024/index.html">STS 2024 (MARRAKESH, MOROCCO)</a></li>
+                                <li><a href="https://github.com/ricoleehduu/STS-Challenge">STS 2023 (Vancouver)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="miccai2024-content" id="miccai2024">
+        <div class="slogan-content">
+            <div style="text-align: center;">
+                <h1 id="slogan-header">
+                    STS 2026 <span class="slogan-detail">: The 4th Semi-supervised Teeth Segmentation Challenge on Metal Artifact Reduction and Beyond</span>
+                </h1>
+                <h2 class="slogan-location">
+                    MICCAI 2026, Strasbourg, France
+                </h2>
+                <h3 class="slogan-time">September 27-October 1, 2026</h3>
+            </div>
+        </div>
+
+        <div class="alert-content main-content">
+            <div class="btn btn-default alert-btn">
+                <p style="text-align: center; margin-bottom: 0;">
+                    🎉<strong>Result Release</strong>!🎉
+                    <a href="task1_winners.html" class="breathing-btn">
+                        <span class="badge" style="font-size: 11pt">Task 1: Segmentation</span>
+                    </a>
+                    <a href="task2_winners.html" class="breathing-btn">
+                        <span class="badge" style="font-size: 11pt">Task 2: Registration</span>
+                    </a>
+                    <a href="task3_winners.html" class="breathing-btn">
+                        <span class="badge" style="font-size: 11pt">Task 3: MMDental</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="introduction-content main-content">
+            <h2 class="content-title">Task 3 Winners: MMDental Multimodal Analysis</h2>
+            <p>
+                Task 3 evaluates structured dental report generation from CBCT volumes on the MMDental dataset. Each case is returned as a seven-field clinical report, and the final ranking is based on the official Docker test evaluation published on the Codabench competition page; the Codabench validation leaderboard is not used for the final ranking.
+            </p>
+            <p>
+                Cells in the table below are points earned in each aspect on the global 100-point scale, and each row sums to the team&rsquo;s total score. The top three teams are highlighted.
+            </p>
+            <div class="winner-table-container">
+                <table class="winner-table">
+                    <tbody>
+                    <tr style="border-top: 2px solid black; border-bottom: 2px solid black">
+                        <td class="winner-head winner-right-border" style="text-align: center;">Team</td>
+                        <td class="winner-head winner-right-border" style="text-align: center;">Diagnosis Accuracy</td>
+                        <td class="winner-head winner-right-border" style="text-align: center;">Oral Exam</td>
+                        <td class="winner-head winner-right-border" style="text-align: center;">Treatment Plan</td>
+                        <td class="winner-head winner-right-border" style="text-align: center;">Record Completeness</td>
+                        <td class="winner-head winner-right-border" style="text-align: center;">Total Score (&#8593;)</td>
+                        <td class="winner-head winner-right-border" style="text-align: center;">Final Rank</td>
+                        <td class="winner-head" style="text-align: center;">Links</td>
+                    </tr>
+                    <tr class="winner-bottom-border winner-medal-gold">
+                        <td class="winner-right-border"><span class="winner-user-link winner-team-name"><img src="icons/user.png" class="winner-user-icon" alt="User">abc-abc</span></td>
+                        <td class="winner-right-border">5.56</td>
+                        <td class="winner-right-border">1.49</td>
+                        <td class="winner-right-border">4.71</td>
+                        <td class="winner-right-border">5.95</td>
+                        <td class="winner-right-border">17.70</td>
+                        <td class="winner-right-border winner-rank-cell">🥇 1</td>
+                        <td><ol class="winner-table-links"><li class="winner-disabled-link">[<a href="#" class="winner-openreview-link"><img src="icons/pdf.png" class="winner-openreview-icon" alt="Report">Report</a>]</li><li class="winner-disabled-link">[<a href="#" class="winner-ppt-link"><img src="icons/ppt.png" class="winner-ppt-icon" alt="Slides">Slides</a>]</li><li>[<a href="https://github.com/abc-w/stsr_task3_image_code" class="winner-github-link" target="_blank" rel="noopener noreferrer"><img src="icons/github.png" class="winner-github-icon" alt="Code">Code</a>]</li></ol></td>
+                    </tr>
+                    <tr class="winner-bottom-border winner-medal-silver">
+                        <td class="winner-right-border"><span class="winner-user-link winner-team-name"><img src="icons/user.png" class="winner-user-icon" alt="User">vinunivnu</span></td>
+                        <td class="winner-right-border">4.89</td>
+                        <td class="winner-right-border">0.00</td>
+                        <td class="winner-right-border">2.72</td>
+                        <td class="winner-right-border">3.76</td>
+                        <td class="winner-right-border">11.37</td>
+                        <td class="winner-right-border winner-rank-cell">🥈 2</td>
+                        <td><ol class="winner-table-links"><li>[<a href="files/solutions/task3/02-vinunivnu-report.pdf" class="winner-openreview-link" target="_blank" rel="noopener noreferrer"><img src="icons/pdf.png" class="winner-openreview-icon" alt="Report">Report</a>]</li><li class="winner-disabled-link">[<a href="#" class="winner-ppt-link"><img src="icons/ppt.png" class="winner-ppt-icon" alt="Slides">Slides</a>]</li><li class="winner-disabled-link">[<a href="#" class="winner-github-link"><img src="icons/github.png" class="winner-github-icon" alt="Code">Code</a>]</li></ol></td>
+                    </tr>
+                    <tr class="winner-bottom-border winner-medal-bronze">
+                        <td class="winner-right-border"><span class="winner-user-link winner-team-name"><img src="icons/user.png" class="winner-user-icon" alt="User">sjtu426lab-task3</span></td>
+                        <td class="winner-right-border">5.29</td>
+                        <td class="winner-right-border">0.00</td>
+                        <td class="winner-right-border">3.12</td>
+                        <td class="winner-right-border">1.68</td>
+                        <td class="winner-right-border">10.08</td>
+                        <td class="winner-right-border winner-rank-cell">🥉 3</td>
+                        <td><ol class="winner-table-links"><li>[<a href="files/solutions/task3/03-sjtu426lab-task3-report.pdf" class="winner-openreview-link" target="_blank" rel="noopener noreferrer"><img src="icons/pdf.png" class="winner-openreview-icon" alt="Report">Report</a>]</li><li>[<a href="files/solutions/task3/03-sjtu426lab-task3-slides.pdf" class="winner-ppt-link" target="_blank" rel="noopener noreferrer"><img src="icons/ppt.png" class="winner-ppt-icon" alt="Slides">Slides</a>]</li><li>[<a href="https://github.com/duola-wa/MICCAI-2026-STS-Task-3" class="winner-github-link" target="_blank" rel="noopener noreferrer"><img src="icons/github.png" class="winner-github-icon" alt="Code">Code</a>]</li></ol></td>
+                    </tr>
+                    <tr style="border-bottom: 2px solid black">
+                        <td class="winner-right-border"><span class="winner-user-link winner-team-name"><img src="icons/user.png" class="winner-user-icon" alt="User">jlshen</span></td>
+                        <td class="winner-right-border">4.50</td>
+                        <td class="winner-right-border">0.00</td>
+                        <td class="winner-right-border">2.07</td>
+                        <td class="winner-right-border">3.50</td>
+                        <td class="winner-right-border">10.06</td>
+                        <td class="winner-right-border winner-rank-cell">4</td>
+                        <td><ol class="winner-table-links"><li>[<a href="files/solutions/task3/04-jlshen-report.pdf" class="winner-openreview-link" target="_blank" rel="noopener noreferrer"><img src="icons/pdf.png" class="winner-openreview-icon" alt="Report">Report</a>]</li><li class="winner-disabled-link">[<a href="#" class="winner-ppt-link"><img src="icons/ppt.png" class="winner-ppt-icon" alt="Slides">Slides</a>]</li><li class="winner-disabled-link">[<a href="#" class="winner-github-link"><img src="icons/github.png" class="winner-github-icon" alt="Code">Code</a>]</li></ol></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="small-text">
+                Each aspect &mdash; diagnosis accuracy, oral examination, treatment plan and record completeness &mdash; is scored on the same global 100-point scale, and the total score is their sum.
+            </p>
+            <p class="small-text">
+                &ldquo;Report&rdquo; opens the team&rsquo;s technical report, &ldquo;Slides&rdquo; the presentation deck shared for the STS 2026 winners&rsquo; session, and &ldquo;Code&rdquo; the team&rsquo;s public repository. Greyed-out items were not released by the team.
+            </p>
+            <p class="small-text">
+                Official results are published on the
+                <a href="https://www.codabench.org/competitions/16117/" target="_blank" rel="noopener noreferrer">Codabench competition page</a>.
+                See the <a href="evaluation_protocol.html">evaluation protocol</a> for metric definitions and
+                penalty values.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-content" id="footer">
+        <p style="text-align: center">
+            Copyright @
+            <a href="https://www.cuz.edu.cn/" target="_blank" style="color: inherit">
+                College of Media Engineering, Communication University of Zhejiang, Hangzhou, 310018, China.
+            </a>
+        </p>
+    </div>
+
+</body>
+
+</html>
